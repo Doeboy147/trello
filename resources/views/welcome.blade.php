@@ -62,7 +62,6 @@
                             <strong> Your tasks</strong>
                         </div>
                         <div class="list-group" ng-repeat="task in tasks">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
                                 <div class="list-group-item mb-2 bg-light shadow-sm">
                                     <small><% task.body %></small>
 
@@ -75,7 +74,6 @@
                                     <a class="badge badge-light modal-trigger" ng-click="deleteTask(task.uuid)">
                                         <i class="fa fa-trash"></i> </a>
                                 </div>
-                            </a>
                         </div>
 
                     </div>
