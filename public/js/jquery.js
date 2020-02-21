@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    clockUpdate();
+    setInterval(clockUpdate, 1000);
+
     $('#createForm').hide();
 
     $('#createBtn').click(function (e) {
@@ -11,18 +14,32 @@ $(document).ready(function () {
         $('#createForm').hide();
     });
 
+    function clockUpdate() {
+        var date = new Date();
+        $('.digital-clock').css({'color': '#000', 'text-shadow': '0 0 1px #000'});
+        function addZero(x) {
+            if (x < 10) {
+                return x = '0' + x;
+            } else {
+                return x;
+            }
+        }
 
-    let listItems = $('.list-group-item');
-    let list = $('.list-group');
+        function twelveHour(x) {
+            if (x > 12) {
+                return x = x - 12;
+            } else if (x == 0) {
+                return x = 12;
+            } else {
+                return x;
+            }
+        }
 
-    let draggedItem = null;
+        var h = addZero(twelveHour(date.getHours()));
+        var m = addZero(date.getMinutes());
+        var s = addZero(date.getSeconds());
 
-    for (let i =0; i < listItems.length; i++){
-        const item = listItems[i];
-        item.addEventListener('dragstart', function (e) {
-            console.log(e);
-            draggedItem = this;
-        })
+        $('.digital-clock').text(h + ':' + m + ':' + s)
     }
 });
 

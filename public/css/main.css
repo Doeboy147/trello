@@ -1,0 +1,9 @@
+.digital-clock {
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    font: 50px/60px 'DIGITAL', Helvetica;
+}

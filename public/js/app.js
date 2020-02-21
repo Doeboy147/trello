@@ -83,3 +83,17 @@ angular.module('MainApp', [], function ($interpolateProvider) {
     $scope.getTasks('done');
     $scope.getTasks('to-do');
 });
+
+
+var dt = new Date();
+dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+
+let hour    = dt.getHours();
+let minutes = dt.getMinutes();
+let seconds = dt.getSeconds();
+
+$('#hours').append('<p>' + hour + '</p>');
+$('#minutes').append('<p>' + minutes + '</p>');
+$('#seconds').append('<p>' + seconds + '</p>');
+
+

@@ -13,6 +13,7 @@
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/materialize.min.css') }}" rel="stylesheet">
+    <link href="{{ url('css/main.css') }}" rel="stylesheet">
 
 </head>
 <body ng-app="MainApp">
@@ -33,7 +34,11 @@
 </nav>
 
 <div class="container-fluid" ng-controller="MainCtrl">
-    <div class="row">
+    <div class="row mt-2 border-top p-2">
+        <div class="col-md-3"><i class="fa fa-edit fa-3x"></i><br> New Task</div>
+        <div class="col-md-3"><i class="fa fa-spinner fa-3x"></i><br> Doing</div>
+        <div class="col-md-3"><i class="fa fa-clock-o fa-3x"></i><br> Delayed</div>
+        <div class="col-md-3"><i class="fa fa-check fa-3x"></i><br> Done</div>
         <div class="col-md-10 border mt-3">
             <div class="row">
                 {{--new task--}}
@@ -148,24 +153,20 @@
                                             <i class="fa fa-trash"></i> </a>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2 bg-light shadow-sm mt-3">
+        <div class="col-md-2 bg-white shadow-sm mt-3">
             <div class="card p-2">
-                <strong class="mb-3 border-bottom"> Activity</strong>
-                <ul>
-                    <li><i class="fa fa-user"></i> TaskName Moved to Doing
-                        <small class="text-muted">An Hour ago</small>
-                    </li>
-                    <li><i class="fa fa-user"></i> Cup of coffee Moved to Done
-                        <small class="text-muted">An Hour ago</small>
-                    </li>
-                </ul>
+                <strong class="mb-3 border-bottom"> Time</strong>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="digital-clock bg-white">00:00:00</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
