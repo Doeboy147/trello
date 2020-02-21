@@ -35,10 +35,10 @@
 
 <div class="container-fluid" ng-controller="MainCtrl">
     <div class="row mt-2 border-top p-2">
-        <div class="col-md-3"><i class="fa fa-edit fa-3x"></i><br> New Task</div>
-        <div class="col-md-3"><i class="fa fa-spinner fa-3x"></i><br> Doing</div>
-        <div class="col-md-3"><i class="fa fa-clock-o fa-3x"></i><br> Delayed</div>
-        <div class="col-md-3"><i class="fa fa-check fa-3x"></i><br> Done</div>
+        <div class="col-md-3"><i class="fa fa-edit fa-2x"></i><br> New Task</div>
+        <div class="col-md-3"><i class="fa fa-spinner fa-2x"></i><br> Doing</div>
+        <div class="col-md-3"><i class="fa fa-clock-o fa-2x"></i><br> Delayed</div>
+        <div class="col-md-3"><i class="fa fa-check fa-2x"></i><br> Done</div>
         <div class="col-md-10 border mt-3">
             <div class="row">
                 {{--new task--}}
@@ -159,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2 bg-white shadow-sm mt-3">
+        <div class="col-md-2 bg-white border-top border-right border-bottom mt-3">
             <div class="card p-2">
                 <strong class="mb-3 border-bottom"> Time</strong>
                 <div class="container-fluid">
