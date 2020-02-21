@@ -19,9 +19,8 @@ class Task extends Controller
             $task->save();
             return $task;
         } catch (QueryException $exception) {
-            print_r($exception->getMessage());
-            die();
-            return redirect('/')->with('error', $exception->getMessage());
+            return print_r($exception->getMessage());
+
         }
     }
 
